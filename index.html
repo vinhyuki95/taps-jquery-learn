@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/stylesheet.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <header class="wrapper">
+    <h1>Tab Nội dung trong Website</h1>
+    <div class="tabs">
+      <ul class="nav-tabs">
+        <li class="active"><a href="#menu1">Menu 1</a></li>
+        <li><a href="#menu2">Menu 2</a></li>
+        <li><a href="#menu3">Menu 3</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="menu1" class="tab-content-item">
+          <h2>Menu1</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam tempore, ea quo magnam, neque animi
+            incidunt
+            nihil atque cum impedit optio consectetur ex voluptatum accusantium dolores, vel eum doloremque? Debitis!
+          </p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam tempore, ea quo magnam, neque animi
+            incidunt
+            nihil atque cum impedit optio consectetur ex voluptatum accusantium dolores, vel eum doloremque? Debitis!
+          </p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam tempore, ea quo magnam, neque animi
+            incidunt
+            nihil atque cum impedit optio consectetur ex voluptatum accusantium dolores, vel eum doloremque? Debitis!
+          </p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam tempore, ea quo magnam, neque animi
+            incidunt
+            nihil atque cum impedit optio consectetur ex voluptatum accusantium dolores, vel eum doloremque? Debitis!
+          </p>
+        </div>
+        <div id="menu2" class="tab-content-item">
+          <h2>Menu2</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam tempore, ea quo magnam, neque animi
+            incidunt
+            nihil atque cum impedit optio consectetur ex voluptatum accusantium dolores, vel eum doloremque? Debitis!
+          </p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam tempore, ea quo magnam, neque animi
+            incidunt
+            nihil atque cum impedit optio consectetur ex voluptatum accusantium dolores, vel eum doloremque? Debitis!
+          </p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam tempore, ea quo magnam, neque animi
+            incidunt
+            nihil atque cum impedit optio consectetur ex voluptatum accusantium dolores, vel eum doloremque? Debitis!
+          </p>
+
+        </div>
+        <div id="menu3" class="tab-content-item">
+          <h2>Menu3</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam tempore, ea quo magnam, neque animi
+            incidunt
+            nihil atque cum impedit optio consectetur ex voluptatum accusantium dolores, vel eum doloremque? Debitis!
+          </p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam tempore, ea quo magnam, neque animi
+            incidunt
+            nihil atque cum impedit optio consectetur ex voluptatum accusantium dolores, vel eum doloremque? Debitis!
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <script>
+    $(function () {
+      $(".tab-content-item").hide();
+      $(".tab-content-item:first-child").fadeIn();
+      $(".nav-tabs li").click(function () {
+        //active nav-tabs
+        $(".nav-tabs li").removeClass("active");
+        $(this).addClass("active");
+        //show tap-content items
+        let id_tab_content = $(this).children("a").attr("href");
+        $(".tab-content-item").hide();
+        $(id_tab_content).fadeIn();
+
+        return false;
+
+      })
+    })
+  </script>
+
+</body>
+
+</html>
